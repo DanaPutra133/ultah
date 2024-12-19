@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday 🎉</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Welcome Page -->
+    <section class="page" id="welcome">
+      <h1 class="title">🎉 Happy Birthday! 🎉</h1>
+      <p class="subtitle">hallo selamat ulang tahu :D</p>
+      <button class="next-button" onclick="navigateTo('message')">klik ini</button>
+    </section>
+
+    <!-- Message Page -->
+    <section class="page hidden" id="message">
+      <h1 class="title">A Special Message 📝</h1>
+      <p class="message">
+        halo nana,<br><br>
+        nih hadiah nya, semoga panjang umur dan sehat selalu🎂🎁🎉
+      </p>
+      <button class="next-button" onclick="navigateTo('gift')">Next</button>
+    </section>
+
+    <!-- Gift Page -->
+    <section class="page hidden" id="gift">
+      <h1 class="title">hadiah kecil</h1>
+      <p class="subtitle">aihihihhi!</p>
+      <!-- Link to the external gift page -->
+      <a href="https://valentine1-navy.vercel.app" target="_blank" class="gift-button">
+        🎁 teken ini 🎁
+      </a>
+    </section>
+  </div>
+
+  <script>
+    // JavaScript for navigation between pages
+    function navigateTo(pageId) {
+      document.querySelectorAll('.page').forEach((page) => {
+        page.classList.add('hidden');
+      });
+      document.getElementById(pageId).classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
